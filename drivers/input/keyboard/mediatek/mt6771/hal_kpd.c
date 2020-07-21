@@ -36,7 +36,7 @@ static u16 kpd_keymap_state[KPD_NUM_MEMS] = {
 };
 
 static bool kpd_sb_enable;
-extern int fnKeyPressed;
+static int fnKeyPressed = 0;
 int powerKeyPressed = 0;
 
 #ifdef CONFIG_MTK_SMARTBOOK_SUPPORT

@@ -931,7 +931,6 @@ static void disable_micbias_callback(struct work_struct *work)
 	}
 }
 //jeff add 20190529 begin
-extern int hdmi_plug_in_flag;
 extern int AudDrv_GPIO_EXTAMP_Select(int bEnable, int mode);
 extern int AudDrv_GPIO_EXTAMP2_Select(int bEnable, int mode);
 //jeff add 20190529 end
@@ -942,7 +941,7 @@ static void accdet_eint_work_callback(struct work_struct *work)
 	int irq_temp = 0;
 #endif
 //jeff add 20190529 begin
-	if (g_cur_eint_state == EINT_PIN_PLUG_IN || hdmi_plug_in_flag == 1)
+	if (g_cur_eint_state == EINT_PIN_PLUG_IN /*|| hdmi_plug_in_flag == 1*/)
 	{//hdmi mode or headset mode close PA
 		AudDrv_GPIO_EXTAMP_Select(false, 3);
 		AudDrv_GPIO_EXTAMP2_Select(false,3);

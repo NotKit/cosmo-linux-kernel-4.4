@@ -3884,13 +3884,13 @@ static int Speaker_Amp_Set(struct snd_kcontrol *kcontrol, struct snd_ctl_elem_va
 	}
 	return 0;
 }
-extern int hdmi_plug_in_flag;
+//extern int hdmi_plug_in_flag;
 extern unsigned int hdmi_det_gpio;
 static void Ext_Speaker_Amp_Change(bool enable)
 {
-	printk("Ext_Speaker_Amp_Change hdmi_plug_in_flag = %d\n",hdmi_plug_in_flag);
+	/*printk("Ext_Speaker_Amp_Change hdmi_plug_in_flag = %d\n",hdmi_plug_in_flag);
 	if (gpio_get_value(hdmi_det_gpio))
-		return;
+		return;*/
 #define SPK_WARM_UP_TIME        (25)	/* unit is ms */
 	if (enable) {
 		pr_debug("Ext_Speaker_Amp_Change ON+\n");

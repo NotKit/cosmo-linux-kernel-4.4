@@ -231,7 +231,7 @@ static ssize_t  RESET_STM32_write(struct file *file, const char *buffer, size_t 
 #ifdef AEON_CHARGE_STATUS_SUPPORT
  #define CHARGE_STATUS_PROC_NAME        "AEON_CHARGE_STATUS"
  bool aeon_charging_enable=0;
-extern unsigned int hdmi_plug_in_flag;
+static unsigned int hdmi_plug_in_flag = 0;
   int aeon_otg_enable=0;
 static struct proc_dir_entry *charge_status_entry;
 static ssize_t CHARGE_STATUS_read(struct file *filp, char __user *buffer, size_t size, loff_t *ppos)
