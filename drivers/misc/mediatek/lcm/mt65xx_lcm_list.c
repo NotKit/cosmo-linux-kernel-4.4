@@ -34,6 +34,9 @@ LCM_DSI_MODE_CON lcm_dsi_mode;
 #endif
 
 LCM_DRIVER *lcm_driver_list[] = {
+#if defined(A61QWERTY46)
+    &A61Qwerty46_lcm_drv,
+#endif
 #if defined(OTM1284A_HD720_DSI_VDO_TM)
 	&otm1284a_hd720_dsi_vdo_tm_lcm_drv,
 #endif
@@ -1161,6 +1164,10 @@ LCM_DRIVER *lcm_driver_list[] = {
 };
 
 unsigned char lcm_name_list[][128] = {
+#if defined(A61QWERTY46)
+    "A61Qwerty46",
+#endif
+
 #if defined(HX8392A_DSI_CMD)
 	"hx8392a_dsi_cmd",
 #endif
